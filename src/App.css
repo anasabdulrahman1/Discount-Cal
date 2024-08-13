@@ -1,20 +1,24 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
 }
+
 .discount-calculator {
-  margin-top: 200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 200px auto; /* Center the container and add top margin */
   background-color: rgba(0, 0, 0, 0.747);
   border-radius: 20px;
-  max-width: 500px;
-  padding: 40px;
+  max-width: 700px; /* Ensure the container doesn't exceed 700px */
+  width: 90%; /* Let the width be responsive, constrained by max-width */
+  padding: 20px;
+  color: white;
+  box-shadow: 33px 26px 5px #0000005e;
+}
+
+.wrapper-container {
+  padding: 30px;
   color: white;
   font-weight: 700;
-  box-shadow: 33px 26px 5px #0000005e;
 }
 
 .discount-calculator h2 {
@@ -25,10 +29,47 @@
 .discount-calculator .buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap; 
+}
+
+.discount-calculator .buttons button {
+  flex: 1;
+  margin: 5px;
 }
 
 .final-price {
   color: yellow;
   font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .discount-calculator {
+    padding: 20px;
+    max-width: 90%; /* Reduce max-width for tablets */
+  }
+
+  .wrapper-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .discount-calculator {
+    margin-top: 50px;
+    padding: 15px;
+  }
+
+  .wrapper-container {
+    padding: 15px;
+  }
+
+  .discount-calculator h2 {
+    font-size: 1.5rem;
+  }
+
+  .final-price {
+    font-size: 1.2rem;
+  }
 }

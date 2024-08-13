@@ -19,7 +19,9 @@ function DiscountCalculator() {
   };
 
   return (
-    <Container className="discount-calculator">
+    <>
+    <div className='discount-calculator'>
+      <div className="wrapper-container ">
       <h2>Discount Calculator</h2>
       <Form>
         <Form.Group controlId="originalPrice">
@@ -49,13 +51,16 @@ function DiscountCalculator() {
       </Form>
 
       {finalPrice && (
-        <Row className="mt-4">
+        <Row className="mt-5">
           <Col>
-            <h4 className="final-price">Discount Amount: &#8377;{finalPrice}</h4>
+            <h4 className="final-price">After Discount Final Amount: &#8377;{finalPrice}</h4>
           </Col>
         </Row>
       )}
-    </Container>
+      </div>
+      </div>
+    
+  </>
   );
 }
 
